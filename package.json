@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "A node library with blockchain nodes",
   "main": "index.js",
-  "files": ["/nodes"],
+  "files": [
+    "/nodes"
+  ],
   "node-red": {
     "version": ">=2.0.0",
     "nodes": {
-      "GetContractBalance": "nodes/GetContractBalance.js",
-      "Contract": "nodes/Contract.js",
-      "Provider": "nodes/Provider.js",
-      "PrivateKey": "nodes/PrivateKey.js"
+      "GetContractBalance": "nodes/core/GetContractBalance.js",
+      "Contract": "nodes/configs/Contract.js",
+      "Provider": "nodes/configs/Provider.js",
+      "PrivateKey": "nodes/configs/PrivateKey.js"
     }
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^6.1.0"
+  }
 }
